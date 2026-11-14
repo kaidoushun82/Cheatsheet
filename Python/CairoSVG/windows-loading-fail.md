@@ -16,6 +16,8 @@ cannot load library 'libcairo-2.dll': error 0x7e
 2. Add following before import cairosvg (see: https://github.com/Kozea/CairoSVG/issues/388#issuecomment-1548803422):
 
 ```
+import sys
+import os
 if sys.platform == 'win32':
     gtkbin = r'C:\gtk3\bin'
     add_dll_dir = getattr(os, 'add_dll_directory', None)
